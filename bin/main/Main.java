@@ -9,7 +9,7 @@ public class Main{
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//window.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		window.setResizable(false);
-		window.setTitle("2D Advanture");
+		window.setTitle("2D Adventure");
 		
 		GamePanel gamePanel = new GamePanel();
 		//window.setBounds();
