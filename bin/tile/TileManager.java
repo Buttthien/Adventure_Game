@@ -22,24 +22,24 @@ public class TileManager {
 		mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
 		
 		getTileImage();
-		loadMap("/bin/res/maps/map1.txt");
+		loadMap("/maps/map1.txt");
 		
 	}
 	public void getTileImage() {
 		try {
 			tile[0] = new Tile();
 			//tile[0].image = new getClass().getResource("/tiles/grass.png");
-			tile[0].image = ImageIO.read(getClass().getResourceAsStream("/bin/res/tiles/grass.png"));
+			tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass.png"));
 			//tile[0].collision = true;
 			
 			tile[1] = new Tile();
 			//tile[1].image = new getClass().getResource("/tiles/tree.png");
-			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/bin/res/tiles//tree.png"));
+			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles//tree.png"));
 			//tile[0].collision = true;
 			
 			tile[2] = new Tile(); 
 			//tile[2].image = new ImageIcon(getClass().getResource("/tiles/earth.png"));
-			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/bin/res/tiles//earth.png"));
+			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles//earth.png"));
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
