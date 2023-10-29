@@ -13,8 +13,8 @@ import main.GamePanel;
 
 public class TileManager { 
 	GamePanel gp;
-	Tile[] tile;
-	int mapTileNum[][];
+	public Tile[] tile;
+	public int mapTileNum[][];
 	public TileManager(GamePanel gp) {
 
 		this.gp = gp;
@@ -22,25 +22,25 @@ public class TileManager {
 		mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
 		
 		getTileImage();
-		loadMap("/maps/map1.txt");
+		loadMap("/res/maps/map1.txt");
 		
 	}
 	public void getTileImage() {
 		try {
 			tile[0] = new Tile();
-			//tile[0].image = new getClass().getResource("/tiles/grass.png");
-			tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass.png"));
-			//tile[0].collision = true;
+			//tile[0].image = new getClass().getResource("/res/tiles/grass.png");
+			tile[0].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/grass.png"));
 			
 			tile[1] = new Tile();
-			//tile[1].image = new getClass().getResource("/tiles/tree.png");
-			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles//tree.png"));
-			//tile[0].collision = true;
+			//tile[1].image = new getClass().getResource("/res/tiles/tree.png");
+			tile[1].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/tree.png"));
+			tile[1].collision = true;
 			
 			tile[2] = new Tile(); 
-			//tile[2].image = new ImageIcon(getClass().getResource("/tiles/earth.png"));
-			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles//earth.png"));
-		}catch(IOException e) {
+			//tile[2].image = new ImageIcon(getClass().getResource("/res/tiles/earth.png"));
+			tile[2].image = ImageIO.read(getClass().getResourceAsStream("/res/tiles/earth.png"));
+			
+		    }catch(IOException e) {
 			e.printStackTrace();
 		}
 	}
